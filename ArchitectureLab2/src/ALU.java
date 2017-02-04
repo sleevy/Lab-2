@@ -88,16 +88,16 @@ public class ALU
 		//if subtract and B>A
 //		boolean bLarger = false;
 		
-		if(subtract) {
+//		if(subtract) {
 //			overflow = !overflow;
-		}
-		if((iB > iA) && subtract) {
+//		}
+//		if((iB > iA) && subtract) {
 //			overflow = !overflow;
-			for(int i = 0; i < bits; i++) {
+//			for(int i = 0; i < bits; i++) {
 //				sums[i] = !sums[i];
-			}
-			
-		}
+//			}
+//			
+//		}
 		
 	}
 	
