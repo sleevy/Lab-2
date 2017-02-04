@@ -14,8 +14,8 @@ public class ALU
 	
 	private boolean[] A, B;
 	
-	private final String NEGATIVE = "-", POSITIVE = "+", ZERO = "";
-	private String sign = POSITIVE;
+//	private final String NEGATIVE = "-", POSITIVE = "+", ZERO = "";
+//	private String sign = POSITIVE;
 	
 	public ALU(int nBits) {
 		bits = nBits;
@@ -54,37 +54,37 @@ public class ALU
 	}
 	
 	public void execute() {
-		int iB = 0;
-		int iA = 0;
-		for(int i = 0; i < bits; i++) {
-			iA += ((A[i]) ? Math.pow(2, i):0);
-			iB += ((B[i]) ? Math.pow(2, i):0);
-		}
+//		int iB = 0;
+//		int iA = 0;
+//		for(int i = 0; i < bits; i++) {
+//			iA += ((A[i]) ? Math.pow(2, i):0);
+//			iB += ((B[i]) ? Math.pow(2, i):0);
+//		}
 		
 		for(int i = 0; i < bits; i++) {
 			opGates[i].setInputs(B[i], subtract);
 			opGates[i].execute();
 			
 			//DEBUG
-			opGates[i].print();
+//			opGates[i].print();
 			
 			adders[i].setInputs(A[i], opGates[i].getOutput(), (i == 0) ? subtract:adders[i-1].getCarry());
 			adders[i].execute();
 			
 			//DEBUG
-			adders[i].print();
+//			adders[i].print();
 			
 			sums[i] = adders[i].getSum();
 		}
 		overflow = adders[bits-1].getCarry();
 		
-		if((iA < iB) && subtract) {
-			sign = NEGATIVE;
-		} else if (iA == iB) {
-			sign = ZERO;
-		} else {
-			sign = POSITIVE;
-		}
+//		if((iA < iB) && subtract) {
+//			sign = NEGATIVE;
+//		} else if (iA == iB) {
+//			sign = ZERO;
+//		} else {
+//			sign = POSITIVE;
+//		}
 		//if subtract and B>A
 //		boolean bLarger = false;
 		
@@ -101,9 +101,9 @@ public class ALU
 		
 	}
 	
-	public String getSign() {
-		return sign;
-	}
+//	public String getSign() {
+//		return sign;
+//	}
 	
 	public boolean[] getSums() {
 		return sums;
