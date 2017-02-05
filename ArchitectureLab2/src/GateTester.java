@@ -15,7 +15,8 @@ public class GateTester
 //		testHalfAdder();
 //		System.out.println();
 //		testFullAdder();
-		int A = 15, B = 4;
+		int A = 4;
+		int B = 7;
 		testALU(4,A,B);
 		System.out.println();
 		testALU(4,B,A);
