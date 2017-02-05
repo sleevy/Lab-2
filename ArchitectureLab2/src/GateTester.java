@@ -4,22 +4,24 @@ public class GateTester
 
 	public static void main(String[] args)
 	{
-//		testAndGate();
-//		System.out.println();
-//		testOrGate();
-//		System.out.println();
-//		testNotGate();
-//		System.out.println();
-//		testXOrGate();
-//		System.out.println();
-//		testHalfAdder();
-//		System.out.println();
-//		testFullAdder();
+		System.out.println("Testing And Gate");
+		testAndGate();
+		System.out.println("\nTesting Or Gate");
+		testOrGate();
+		System.out.println("\nTesting Not Gate");
+		testNotGate();
+		System.out.println("\nTesting XOr Gate");
+		testXOrGate();
+		System.out.println("\nTesting Half Adder");
+		testHalfAdder();
+		System.out.println("\nTesting Full Adder");
+		testFullAdder();
+		System.out.println("\nTesting ALU");
 		int A = 4;
 		int B = 7;
 		testALU(4,A,B);
-		System.out.println();
-		testALU(4,B,A);
+//		System.out.println();
+//		testALU(4,B,A);
 	}
 
 	public static void testALU(int bits, int A, int B) {
@@ -35,7 +37,7 @@ public class GateTester
 		//expected: (1)0011
 		System.out.println(Integer.toBinaryString(A)+ (alu.getOp() ? " - ":" + ") + Integer.toBinaryString(B) + " = " /*+ alu.getSign()*/ + (alu.getOverflow() ? "(1)":"(0)") + boolsToBinString(alu.getSums()));
 		
-		System.out.println();
+//		System.out.println();
 		
 		alu.setInputs(intToBools(A), intToBools(B), true);
 		alu.execute();
