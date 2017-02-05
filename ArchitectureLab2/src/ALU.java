@@ -54,12 +54,7 @@ public class ALU
 	}
 	
 	public void execute() {
-//		int iB = 0;
-//		int iA = 0;
-//		for(int i = 0; i < bits; i++) {
-//			iA += ((A[i]) ? Math.pow(2, i):0);
-//			iB += ((B[i]) ? Math.pow(2, i):0);
-//		}
+		
 		
 		for(int i = 0; i < bits; i++) {
 			opGates[i].setInputs(B[i], subtract);
@@ -78,6 +73,15 @@ public class ALU
 		}
 		overflow = adders[bits-1].getCarry();
 		
+//		int iB = 0;
+//		int iA = 0;
+//		for(int i = 0; i < bits; i++) {
+//			iA += ((A[i]) ? Math.pow(2, i):0);
+//			iB += ((B[i]) ? Math.pow(2, i):0);
+//		}
+//		if(iA < iB) {
+//			overflow = true;
+//		}
 //		if((iA < iB) && subtract) {
 //			sign = NEGATIVE;
 //		} else if (iA == iB) {

@@ -32,7 +32,7 @@ public class GateTester
 //		}
 //		System.out.println();
 		//expected: (1)0011
-		System.out.println(Integer.toBinaryString(A)+ (alu.getOp() ? "-":"+") + Integer.toBinaryString(B) + "= " /*+ alu.getSign()*/ + (alu.getOverflow() ? "(1)":"(0)") + boolsToBinString(alu.getSums()));
+		System.out.println(Integer.toBinaryString(A)+ (alu.getOp() ? " - ":" + ") + Integer.toBinaryString(B) + " = " /*+ alu.getSign()*/ + (alu.getOverflow() ? "(1)":"(0)") + boolsToBinString(alu.getSums()));
 		
 		System.out.println();
 		
@@ -40,7 +40,7 @@ public class GateTester
 		alu.execute();
 //		System.out.println(boolsToInt(alu.getSums()) + ":" + alu.getOverflow());
 		//expected: (0)1011 or (1)1011 depending on if A is 15
-		System.out.println(Integer.toBinaryString(A)+ (alu.getOp() ? "-":"+") + Integer.toBinaryString(B) + "= " /*+ alu.getSign()*/ + (alu.getOverflow() ? "(1)":"(0)") + boolsToBinString(alu.getSums()));
+		System.out.println(Integer.toBinaryString(A)+ (alu.getOp() ? " - ":" + ") + Integer.toBinaryString(B) + " = " /*+ alu.getSign()*/ + (alu.getOverflow() ? "(1)":"(0)") + boolsToBinString(alu.getSums()));
 		
 	}
 	
